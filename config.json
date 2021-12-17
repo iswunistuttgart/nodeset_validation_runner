@@ -1,0 +1,16 @@
+{
+  "nodesetFile": "D:\\01_Nextcloud\\30_Projekte\\2019_VDMA_LMT\\90_Realisierung\\UaModelerProject\\opc.ua.gms.nodeset2.xml",
+  "supportingNodeSetFiles": [
+    "assets/deps/opc.ua.machinery.result.nodeset2.xml",
+    "assets/deps/Opc.Ua.Di.NodeSet2.xml",
+    "assets/deps/Opc.Ua.Ia.NodeSet2.xml",
+    "assets/deps/Opc.Ua.MachineTool.Nodeset2.xml",
+    "assets/deps/Opc.Ua.Machinery.NodeSet2.xml"
+  ],
+  "specificationFile": "D:\\01_Nextcloud\\30_Projekte\\2019_VDMA_LMT\\90_Realisierung\\90_CompanionSpecification\\OPCUA4GMS_v15.docx",
+  "email": "",
+  "ignoreTypes": "",
+  "suppressErrors": "",
+  "noDelete": "false",
+  "checkConformanceUnits": "false"
+}

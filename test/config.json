@@ -1,0 +1,14 @@
+{
+  "nodesetFile": "../assets/coffeemachine.nodeset2.xml",
+  "supportingNodeSetFiles": [
+    "../assets/deps/Opc.Ua.Di.NodeSet2.xml",
+    "../assets/deps/Opc.Ua.Ia.NodeSet2.xml",
+    "../assets/deps/Opc.Ua.Machinery.NodeSet2.xml"
+  ],
+  "specificationFile": "../assets/example.docx",
+  "email": "max@mustermann.de",
+  "ignoreTypes": "BaseObjectType",
+  "suppressErrors": "InvalideNodeClass",
+  "noDelete": "false",
+  "checkConformanceUnits": "false"
+}
