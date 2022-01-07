@@ -19,10 +19,16 @@ def prepare_input_data_from_config(config_path):
     with open(config_path, "r") as json_file:
         config = json.loads(json_file.read())
 
-        files = [("nodesetFile", open(config['nodesetFile'], 'rb'))]
+        with open(config['nodesetFile'], 'rb') as nodeset_file:
+            files = [("nodesetFile", nodeset_file)]
+
         for support_node_set in config['supportingNodeSetFiles']:
-            files.append(("supportingNodeSetFiles", open(support_node_set, 'rb')))
-        files.append(("specificationFile", open(config['specificationFile'], 'rb')))
+            with open(support_node_set, 'rb') as nodeset_file:
+                files.append(("supportingNodeSetFiles", nodeset_file))
+
+        with open(config['specificationFile'], 'rb') as specification_file:
+            files.append(("specificationFile", specification_file))
+
         data = {
             "email": config['email'],
             "ignoreTypes": config['ignoreTypes'],
@@ -39,6 +45,7 @@ def prepare_input_data_from_config(config_path):
                               config["noDelete"],
                               config["checkConformanceUnits"])
 
+
 def prepare_input_data_from_cli(args):
     return prepare_input_data(args["nodesetfile"],
                               args["supportingNodeSetFiles"],
@@ -48,6 +55,7 @@ def prepare_input_data_from_cli(args):
                               args["suppressErrors"],
                               args["noDelete"],
                               args["checkConformanceUnits"])
+
 
 def prepare_input_data(nodesetfile,
                        supporting_node_set_files,
@@ -88,6 +96,7 @@ def get_validation_result(timeout, job_id):
         else:
             print(response.text)
             break
+    print(f"More information can be found at: {result_url}")
 
 
 def main():
@@ -97,7 +106,9 @@ def main():
     else:
         data, files = prepare_input_data_from_cli(args)
     job_id = request_validation(data, files)
-    get_validation_result(timeout=(10 * 60), job_id=job_id)
+    del data
+    del files
+    get_validation_result(timeout=(15 * 60), job_id=job_id)
 
 
 def argument_parser():
