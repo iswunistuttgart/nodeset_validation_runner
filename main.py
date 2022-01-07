@@ -96,7 +96,7 @@ def get_validation_result(timeout, job_id):
         else:
             print(response.text)
             break
-    print(f"More information can be found at: {result_url}")
+    print(f"More information can be found at:https://apps.opcfoundation.org/NodeSetValidator/Home/Results/{job_id}")
 
 
 def main():
