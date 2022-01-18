@@ -1,11 +1,11 @@
 # OPC UA Nodeset Validation Runner
-This is a short script that start a validation of the 
-Nodeset Valdation tool (see https://apps.opcfoundation.org/NodeSetValidator/) of the OPC Foundation. 
+This is a short script that starts a validation of the 
+Nodeset Validation tool (see https://apps.opcfoundation.org/NodeSetValidator/) of the OPC Foundation. 
 It is an unofficial python client that should simplify the automated using.
 
 
 ## Dependencies
-see requirement.txt
+see requirements.txt
 
 ## Installation
 pip install -r requirements.txt
@@ -23,5 +23,5 @@ pip install -r requirements.txt
 - email (not needed): An optional email used to send a notification when the processing compeletes.
 - ignoreTypes: An optional comma seperated list of type names which will be ignored by the tool.
 - suppressErrors: An optional comma seperated list of errors which should be suppressed.
-- noDelete: Flag that indicate if the file are removed from the serve automatically 
+- noDelete: Flag that indicates if the files are removed from the server automatically 
 - checkConformanceUnits (new Feature): Check that the conformance units assigned to nodes exist in the profile database.

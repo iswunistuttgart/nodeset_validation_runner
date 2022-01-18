@@ -10,7 +10,7 @@ def request_validation(data, files):
     response = requests.post(url, files=files, data=data)
     job_id = get_job_id(response.text)
     print(f"Get response {response} of ther server: ")
-    print(f"Validation Job started with numver {job_id}")
+    print(f"Validation Job started with number {job_id}")
     # print(response.text)
     return job_id
 
