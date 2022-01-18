@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 - copy test/config.json
 - modify config.json file (to your own  Companion Specification / nodeset / ...)
-- run python main.py --config config.json
+- `run python main.py --config config.json`
 
 ## Config Stucture
 - nodesetFile: A file to validate that conforms to the UANodeSet schema defined in Part 6 of the OPC UA Specification. 
